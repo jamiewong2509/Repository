@@ -113,7 +113,7 @@
   .modal .prize-name { font-family: 'Fredoka One', cursive; font-size: 1.4rem; color: var(--dark); line-height: 1.3; }
   .modal .congrats { margin-top: 12px; font-size: .95rem; color: #777; font-weight: 700; }
 
-  /* Special style for 多謝惠顧 modal */
+  /* Special style for 多謝參與 modal */
   .modal.thankyou .hbd { color: #aaa; font-size: 1.3rem; }
   .modal.thankyou .prize-name { color: #888; font-size: 1.6rem; }
 
@@ -184,7 +184,7 @@
 // the pointer lands on by computing the exact stop angle.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const THANKYOU = { label: "多謝惠顧", name: "多謝惠顧", emoji: "🙏", color: "#A8D8A8", isThankyou: true };
+const THANKYOU = { label: "多謝參與", name: "多謝參與", emoji: "🙏", color: "#A8D8A8", isThankyou: true };
 const S1       = { label: "Surprise",  name: "森美同款飲料一盒",     emoji: "🥤", color: "#FF6EB4" };
 const S2       = { label: "Surprise",  name: "BEYOND 蔥油雞一客",    emoji: "🍗", color: "#FFB830" };
 const S3       = { label: "Surprise",  name: "SERVICING 林家謙一個", emoji: "🎤", color: "#B06DFF" };
@@ -374,10 +374,10 @@ function showModal(prize, round) {
   if (prize.isThankyou) {
     box.className = 'modal thankyou';
     document.getElementById('modalBurst').textContent = '🙏';
-    document.getElementById('modalTitle').textContent = '多謝惠顧！';
+    document.getElementById('modalTitle').textContent = '多謝參與！';
     document.getElementById('modalRound').textContent = `Round ${round} of ${totalSpins}`;
     document.getElementById('modalEmoji').textContent = '🙏';
-    document.getElementById('modalPrize').textContent = '多謝惠顧';
+    document.getElementById('modalPrize').textContent = '多謝參與';
     document.getElementById('modalCongrats').textContent = 'Better luck next time! 🍀';
   } else {
     box.className = 'modal';
